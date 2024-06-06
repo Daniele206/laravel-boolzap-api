@@ -12,4 +12,8 @@ class Contact extends Model
     public function messages(){
         return $this->hasMany(Message::class);
     }
+
+    public function chats(){
+        return $this->belongsToMany(Chat::class);
+    }
 }
